@@ -1,0 +1,55 @@
+:root{
+  --bg:#f5f7fb; --card:#ffffff; --text:#0b1320; --muted:#6b7280;
+  --accent:#2563eb; --gap:1rem; --radius:10px; font-size:16px;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui; color:var(--text); background:var(--bg); line-height:1.4}
+.wrap{max-width:1000px;margin:0 auto;padding:1rem}
+
+/* header (Flexbox) */
+.site-header{background:transparent;padding:.6rem 0}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.5rem} .brand img{width:36px;border-radius:6px}
+nav a{margin-left:.6rem;text-decoration:none;color:var(--muted)}
+.btn{background:transparent;border:1px solid rgba(0,0,0,.08);padding:.5rem .8rem;border-radius:8px;text-decoration:none;color:var(--text)}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;border:none}
+
+/* hero */
+.hero{padding:2rem 0}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;align-items:center;gap:1rem;animation:fade .6s}
+.hero img{width:100%;border-radius:12px;}
+
+/* grid for courses (CSS Grid) */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:0;list-style:none}
+.card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(15,23,42,.06);padding:0}
+.card img{width:100%;display:block;height:140px;object-fit:cover}
+.card h3{margin:.6rem 1rem 0}
+.card .muted{color:var(--muted);font-size:.9rem;margin:0 1rem .6rem}
+.card-actions{display:flex;justify-content:space-between;align-items:center;padding:0 1rem 1rem}
+
+/* pricing */
+.pricing{display:flex;gap:1rem;margin-top:1rem}
+.plan{flex:1;background:var(--card);padding:1rem;border-radius:10px}
+.plan.popular{box-shadow:0 8px 30px rgba(37,99,235,.12);transform:translateY(-4px)}
+
+/* form */
+.form{display:flex;flex-direction:column;gap:.5rem;max-width:420px}
+.form input,.form textarea{padding:.6rem;border:1px solid #e6e9ef;border-radius:8px}
+
+/* footer */
+.site-footer{padding:1rem 0;margin-top:2rem;border-top:1px solid #e6e9ef}
+.site-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+
+/* animation */
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* responsive (two breakpoints) */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero-inner{grid-template-columns:1fr}
+  .pricing{flex-direction:column}
+}
+@media (max-width:480px){
+  .grid{grid-template-columns:1fr}
+  .site-header .wrap{flex-direction:column;align-items:flex-start}
+  nav a{margin-left:0;margin-top:.4rem}
+}

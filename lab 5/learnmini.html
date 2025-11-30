@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LearnWell — Mini</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><img src="https://via.placeholder.com/48" alt="logo"><strong>LearnWell</strong></div>
+      <nav aria-label="Main navigation">
+        <a href="#courses">Courses</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#signup">Sign Up</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <h1>Learn new skills — fast</h1>
+          <p>Short practical courses with projects and certificates.</p>
+          <p><a class="btn primary" href="#courses">Explore</a></p>
+        </div>
+        <img src="https://via.placeholder.com/420x260" alt="student on laptop">
+      </div>
+    </section>
+
+    <section id="courses" class="wrap">
+      <h2>Popular courses</h2>
+      <ul class="grid" role="list">
+        <li class="card">
+          <img src="https://via.placeholder.com/600x360" alt="HTML course">
+          <h3>HTML & CSS</h3>
+          <p class="muted">Beginner • 6 hrs</p>
+          <div class="card-actions"><a class="btn small" href="#">Preview</a><a href="#">₹499</a></div>
+        </li>
+        <li class="card">
+          <img src="https://via.placeholder.com/600x360" alt="JS course">
+          <h3>JavaScript</h3>
+          <p class="muted">Intermediate • 12 hrs</p>
+          <div class="card-actions"><a class="btn small" href="#">Preview</a><a href="#">₹799</a></div>
+        </li>
+        <li class="card">
+          <img src="https://via.placeholder.com/600x360" alt="Data course">
+          <h3>Data Basics</h3>
+          <p class="muted">Intermediate • 10 hrs</p>
+          <div class="card-actions"><a class="btn small" href="#">Preview</a><a href="#">₹999</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="pricing" class="wrap simple-section">
+      <h2>Pricing</h2>
+      <div class="pricing">
+        <article class="plan">
+          <h3>Free</h3><p class="price">₹0 / month</p>
+          <ul><li>Free courses</li><li>Community</li></ul>
+          <a class="btn" href="#signup">Start</a>
+        </article>
+        <article class="plan popular">
+          <h3>Pro</h3><p class="price">₹499 / month</p>
+          <ul><li>All courses</li><li>Certificates</li></ul>
+          <a class="btn primary" href="#signup">Choose</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap simple-section">
+      <h2>Contact / Sign up</h2>
+      <form id="signup" class="form" onsubmit="alert('Demo: form submitted'); return false;">
+        <label for="name">Name</label>
+        <input id="name" name="name" required placeholder="Your name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+        <label for="msg">Message</label>
+        <textarea id="msg" name="message" rows="4" placeholder="How can we help?" required></textarea>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="y"></span> LearnWell</small>
+      <nav aria-label="Footer"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
